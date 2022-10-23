@@ -1,0 +1,176 @@
+
+/* glowne ustawienia strony */
+
+/* glowny color czcionki (var)*/
+:root {
+    --primary-color: #e50914;
+}
+
+/* resetowanie marginesow, odstepow, kontenerow */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ustawianie czcionki, tla, coloru czcionki w body */
+body {
+    font-family: 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #999;
+}
+
+/* resetowanie ustawien list */
+ul {
+    list-style: none;
+}
+
+/* ustawienie koloru dla naglowkow */
+h1,
+h2,
+h3, 
+h4 {
+    color: #fff;
+}
+
+/* ustawienie koloru linkow i usuniecie podkreslenia */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ustawinie odstepu paragrafow */
+ p {
+    margin: .5rem 0;
+ }
+
+ /* ustawienie szerokosci obrazkow */
+ img {
+    width: 100%;
+ }
+/* ____________________________________________________________________________________________________ */
+/* ____________________________________________________________________________________________________ */
+
+
+
+ /* .klasa glownego kontenera */
+ /* ustawienie szerokosci i wysokosci, tla. vh - view port */
+ .showcase {
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    background: url('../img/background.png') no-repeat center center/cover;
+    box-shadow: inset 100px 50px 250px #000000;
+ }
+
+ /* przyciemnianie tla */
+ .showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6)
+ }
+
+ /* .klasa gornego kontenera  */
+ .showcase-top {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+ }
+
+ .showcase-top img {
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    top: 1.5rem;
+    left: 2.5rem;
+    /* transform: translate(-50%, -50%); */
+ }
+
+ /* .link gornego kontenera (przycisk)*/
+ .showcase-top a {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+ }
+
+/* .link glownego kontenera */
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.showcase-content h1 {
+    font-weight: 600;
+    font-size: 3.1rem;
+    line-height: 1;
+    margin: 0 0 2rem;
+
+}
+
+.showcase-content p {
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.1 ;
+    margin: 0 0 .8rem;
+}
+
+#email {
+    width: 450px;
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+}
+
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: .4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: .5rem;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    border-radius: 2px;
+}
+
+/* zmiana koloru po najechaniu na przycisk */
+.btn:hover {
+    opacity: 0.9;
+}
+
+/*  */
+.btn-rounded {
+    border-radius: 5px;
+}
+
+.btn-lg {
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    text-transform: uppercase;
+}
+
+.btn-xl {
+    font-size: 1rem;
+    padding: .8rem 1.3rem;
+    text-transform: uppercase;
+}
