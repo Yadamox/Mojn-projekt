@@ -182,6 +182,17 @@ a {
     color: white;
 }
 
+/* HIDE CONTENT INITIALLY */
+ #tab-1-content,
+ #tab-2-content,
+ #tab-3-content {
+    display: none;
+ }
+
+ .show {
+    display: block !important;
+ }
+
 
 #tab-1-content .tab-1-content-inner {
     display: grid;
@@ -340,6 +351,9 @@ a {
     text-transform: uppercase;
 }
 
+.btn-icon {
+    margin-left: 1rem;
+}
 @media (max-width: 960px) {
     .showcase {
         height: 70vh;
